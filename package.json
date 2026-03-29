@@ -1,0 +1,12 @@
+{
+  "name": "dsaviz",
+  "version": "1.0.0",
+  "description": "Root configuration for deploying DSAViz to Render.",
+  "scripts": {
+    "build": "cd backend && npm install",
+    "start": "cd backend && npm start"
+  },
+  "engines": {
+    "node": ">=16.x"
+  }
+}

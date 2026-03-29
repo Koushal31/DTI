@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — DSAViz</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .pwd-wrapper { position: relative; }
+    .pwd-wrapper .form-input { padding-right: 40px; }
+    .eye-toggle {
+      position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+      cursor: pointer; color: var(--text-3); user-select: none;
+      font-size: 14px; display: flex; align-items: center; justify-content: center;
+    }
+    .eye-toggle:hover { opacity: 0.8; }
+    
+    .strength-meter-box {
+      display: flex; gap: 4px; margin-top: 6px; height: 4px; border-radius: 2px;
+    }
+    .strength-bar {
+      flex: 1; background: var(--border); border-radius: 2px; transition: background 0.3s;
+    }
+    .strength-text {
+      font-size: 11px; text-align: right; color: var(--text-3); font-weight: 500; margin-top: 4px;
+    }
+    
+    .input-error { border-color: var(--red) !important; box-shadow: 0 0 0 2px var(--red-light) !important; }
+    .error-msg-inline { color: var(--red); font-size: 12px; margin-top: 4px; display: none; margin-bottom: 2px; }
+    
+    .loader-inline {
+      display: inline-block; width: 14px; height: 14px; margin-right: 6px; position: relative; top: 2px;
+      border: 2px solid rgba(255,255,255,0.3); border-radius: 50%;
+      border-top-color: #fff; animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">DSA Visualizer</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sorting.html">Sorting</a></li>
+    <li><a href="searching.html">Searching</a></li>
+    <li><a href="trees.html">Trees</a></li>
+    <li><a href="graphs.html">Graphs</a></li>
+    <li><a href="hashing.html">Hashing</a></li>
+    <li><a href="linked-list.html">Linked List</a></li>
+    <li><a href="stack.html">Stack</a></li>
+    <li><a href="queue.html">Queue</a></li>
+    <li><a href="practice.html">Practice</a></li>
+  </ul>
+  <div class="nav-right" id="nav-right"></div>
+  <button class="theme-btn" id="theme-toggle" title="Toggle theme">☾</button>
+</nav>
+
+<div class="login-page">
+  <div class="login-card">
+    <div class="login-logo">DSA Visualizer</div>
+    <div class="login-sub">track your progress, earn badges, build streaks</div>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tab-login" onclick="switchTab('login')">Login</button>
+      <button class="auth-tab" id="tab-signup" onclick="switchTab('signup')">Sign up</button>
+    </div>
+
+    <div class="alert" id="alert"></div>
+
+    <!-- Login -->
+    <div class="form-section active" id="section-login">
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input class="form-input" type="email" id="login-email" placeholder="you@example.com"/>
+      </div>
+      <div class="form-group">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom: 6px;">
+          <label class="form-label" style="margin-bottom:0">Password</label>
+          <a href="#" style="font-size:12px; color:var(--blue); text-decoration:none;" onclick="event.preventDefault(); showAlert('Password reset link sent to your email (Demo).', 'success')">Forgot password?</a>
+        </div>
+        <div class="pwd-wrapper">
+          <input class="form-input" type="password" id="login-password" placeholder="••••••••"/>
+          <span class="eye-toggle" onclick="togglePwd('login-password', this)">👁️</span>
+        </div>
+        <div class="error-msg-inline" id="login-pwd-err"></div>
+      </div>
+      <div style="margin-bottom: 16px; display:flex; align-items:center; gap:6px;">
+        <input type="checkbox" id="login-remember" checked style="accent-color:var(--blue); cursor:pointer">
+        <label for="login-remember" style="font-size:13px; color:var(--text-2); cursor:pointer; user-select:none;">Remember me for 30 days</label>
+      </div>
+      <button class="form-btn" id="btn-login" onclick="doLogin()">Login</button>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:14px">
+        No account? <a href="#" onclick="switchTab('signup')" style="color:var(--text-light)">Sign up free</a>
+      </p>
+    </div>
+
+    <!-- Signup -->
+    <div class="form-section" id="section-signup">
+      <div class="form-group">
+        <label class="form-label">Full name</label>
+        <input class="form-input" type="text" id="signup-name" placeholder="Your name"/>
+        <div class="error-msg-inline" id="signup-name-err"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input class="form-input" type="email" id="signup-email" placeholder="you@example.com"/>
+        <div class="error-msg-inline" id="signup-email-err"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <div class="pwd-wrapper">
+          <input class="form-input" type="password" id="signup-password" placeholder="Min 6 characters" oninput="checkStrength(this.value)"/>
+          <span class="eye-toggle" onclick="togglePwd('signup-password', this)">👁️</span>
+        </div>
+        <div class="strength-meter-box">
+          <div class="strength-bar" id="str-1"></div>
+          <div class="strength-bar" id="str-2"></div>
+          <div class="strength-bar" id="str-3"></div>
+        </div>
+        <div class="strength-text" id="str-text">Strength: —</div>
+        <div class="error-msg-inline" id="signup-pwd-err"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Confirm Password</label>
+        <div class="pwd-wrapper">
+          <input class="form-input" type="password" id="signup-confirm" placeholder="Repeat password"/>
+          <span class="eye-toggle" onclick="togglePwd('signup-confirm', this)">👁️</span>
+        </div>
+        <div class="error-msg-inline" id="signup-confirm-err"></div>
+      </div>
+      <button class="form-btn" id="btn-signup" onclick="doSignup()">Create Account</button>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:14px">
+        Already have an account? <a href="#" onclick="switchTab('login')" style="color:var(--text-light)">Login</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">DSA Visualizer — Learn Algorithms Step by Step</footer>
+<script src="js/main.js"></script>
+<script>
+function switchTab(tab) {
+  document.getElementById('tab-login').classList.toggle('active', tab === 'login');
+  document.getElementById('tab-signup').classList.toggle('active', tab === 'signup');
+  document.getElementById('section-login').classList.toggle('active', tab === 'login');
+  document.getElementById('section-signup').classList.toggle('active', tab === 'signup');
+  hideAlert();
+}
+
+function showAlert(msg, type) {
+  const el = document.getElementById('alert');
+  el.textContent = msg;
+  el.className = 'alert show alert-' + type;
+}
+function hideAlert() {
+  document.getElementById('alert').className = 'alert';
+}
+
+function clearErrors() {
+  document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+  document.querySelectorAll('.error-msg-inline').forEach(el => el.textContent = '');
+}
+function showError(inputId, msgId, message) {
+  document.getElementById(inputId).classList.add('input-error');
+  document.getElementById(msgId).textContent = message;
+}
+
+function togglePwd(id, icon) {
+  const input = document.getElementById(id);
+  if (input.type === 'password') {
+    input.type = 'text';
+    icon.textContent = '🔒';
+  } else {
+    input.type = 'password';
+    icon.textContent = '👁️';
+  }
+}
+
+function checkStrength(val) {
+  let score = 0;
+  if (!val) { updateMeter(0, '—'); return; }
+  
+  if (val.length > 5) score++;
+  if (val.length > 8) score++;
+  if (/[A-Z]/.test(val)) score++;
+  if (/\d/.test(val)) score++;
+  if (/[^A-Za-z0-9]/.test(val)) score++;
+  
+  if (score <= 1) updateMeter(1, 'Weak', 'var(--red)');
+  else if (score <= 3) updateMeter(2, 'Fair', 'var(--orange)');
+  else updateMeter(3, 'Strong', 'var(--green)');
+}
+
+function updateMeter(bars, text, color) {
+  document.getElementById('str-1').style.background = bars >= 1 ? color : 'var(--border)';
+  document.getElementById('str-2').style.background = bars >= 2 ? color : 'var(--border)';
+  document.getElementById('str-3').style.background = bars >= 3 ? color : 'var(--border)';
+  const t = document.getElementById('str-text');
+  t.textContent = 'Strength: ' + text;
+  t.style.color = color || 'var(--text-3)';
+}
+
+async function doLogin() {
+  clearErrors();
+  hideAlert();
+  const email    = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+  let hasErr = false;
+  if (!email) { showError('login-email', 'login-pwd-err', 'Email is required'); hasErr = true; }
+  if (!password) { showError('login-password', 'login-pwd-err', 'Password is required'); hasErr = true; }
+  if (hasErr) return;
+
+  const btn = document.getElementById('btn-login');
+  btn.disabled = true; btn.innerHTML = '<span class="loader-inline"></span> Logging in...';
+
+  try {
+    const API_BASE = window.location.protocol === 'file:' ? 'http://localhost:5000/api' : '/api';
+    const res  = await fetch(API_BASE + '/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Login failed');
+    
+    const isRemembered = document.getElementById('login-remember').checked;
+    const storage = isRemembered ? localStorage : sessionStorage;
+    storage.setItem('token', data.token);
+    storage.setItem('user', JSON.stringify(data.user));
+    
+    // Clear the other storage just in case
+    (isRemembered ? sessionStorage : localStorage).removeItem('token');
+    (isRemembered ? sessionStorage : localStorage).removeItem('user');
+    
+    showAlert('Login successful! Redirecting...', 'success');
+    btn.innerHTML = 'Success!';
+    setTimeout(() => location.href = 'index.html', 700);
+  } catch (e) {
+    showAlert(e.message, 'error');
+    btn.disabled = false; btn.textContent = 'Login';
+  }
+}
+
+async function doSignup() {
+  clearErrors();
+  hideAlert();
+  const name     = document.getElementById('signup-name').value.trim();
+  const email    = document.getElementById('signup-email').value.trim();
+  const password = document.getElementById('signup-password').value;
+  const confirm  = document.getElementById('signup-confirm').value;
+  
+  let hasErr = false;
+  if (!name) { showError('signup-name', 'signup-name-err', 'Name is required'); hasErr = true; }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) { showError('signup-email', 'signup-email-err', 'Valid email is required'); hasErr = true; }
+  if (password.length < 6) { showError('signup-password', 'signup-pwd-err', 'Password must be at least 6 characters'); hasErr = true; }
+  if (password !== confirm) { showError('signup-confirm', 'signup-confirm-err', 'Passwords do not match'); hasErr = true; }
+  if (hasErr) return;
+
+  const btn = document.getElementById('btn-signup');
+  btn.disabled = true; btn.innerHTML = '<span class="loader-inline"></span> Creating account...';
+
+  try {
+    const API_BASE = window.location.protocol === 'file:' ? 'http://localhost:5000/api' : '/api';
+    const res  = await fetch(API_BASE + '/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, password })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Signup failed');
+    
+    // Default signup stores via local storage
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+    
+    showAlert('Account created! Redirecting...', 'success');
+    btn.innerHTML = 'Success!';
+    setTimeout(() => location.href = 'index.html', 700);
+  } catch (e) {
+    showAlert(e.message, 'error');
+    btn.disabled = false; btn.textContent = 'Create Account';
+  }
+}
+
+// Enter key support
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  document.getElementById('section-login').classList.contains('active') ? doLogin() : doSignup();
+});
+
+// Check URL param
+if (new URLSearchParams(location.search).get('tab') === 'signup') switchTab('signup');
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Graphs — DSA Visualizer</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .graph-canvas-wrap {
+      position: relative;
+      min-height: 360px;
+      overflow: hidden;
+      user-select: none;
+    }
+    #graph-svg {
+      display: block;
+      width: 100%;
+      height: 360px;
+    }
+    /* Nodes */
+    .g-node circle {
+      fill: var(--surface);
+      stroke: var(--border-2);
+      stroke-width: 2;
+      transition: fill 0.2s, stroke 0.2s;
+      cursor: pointer;
+    }
+    .g-node.unvisited circle { fill: var(--surface); stroke: var(--border-2); }
+    .g-node.visiting  circle { fill: var(--blue-light); stroke: var(--blue); stroke-width: 2.5; }
+    .g-node.visited   circle { fill: var(--green-light); stroke: var(--green); stroke-width: 2; }
+    .g-node.queued    circle { fill: var(--orange-light, #fff7ed); stroke: var(--orange); }
+    .g-node.start     circle { fill: var(--blue); stroke: var(--blue-dark); }
+    .g-node.start text { fill: #fff; }
+    .g-node text {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      fill: var(--text);
+      text-anchor: middle;
+      dominant-baseline: central;
+      pointer-events: none;
+    }
+    /* Edges */
+    .g-edge { stroke: var(--border-2); stroke-width: 2; fill: none; transition: stroke 0.2s; }
+    .g-edge.traversed { stroke: var(--blue); stroke-width: 3; }
+
+    /* Visit order badges */
+    .g-visit-order {
+      position: absolute;
+      font-size: 10px;
+      font-family: var(--mono);
+      font-weight: 700;
+      color: var(--green);
+      pointer-events: none;
+    }
+
+    /* Queue/Stack display */
+    .ds-display {
+      padding: 10px 16px;
+      border-top: 1px solid var(--border);
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 12px;
+    }
+    .ds-label { color: var(--text-3); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); }
+    .ds-item  { padding: 2px 9px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--mono); font-size: 12px; font-weight: 600; }
+    .ds-item.active { background: var(--blue-light); border-color: var(--blue); color: var(--blue); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">DSA Visualizer</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sorting.html">Sorting</a></li>
+    <li><a href="searching.html">Searching</a></li>
+    <li><a href="trees.html">Trees</a></li>
+    <li><a href="graphs.html" class="active">Graphs</a></li>
+    <li><a href="hashing.html">Hashing</a></li>
+    <li><a href="linked-list.html">Linked List</a></li>
+    <li><a href="stack.html">Stack</a></li>
+    <li><a href="queue.html">Queue</a></li>
+    <li><a href="practice.html">Practice</a></li>
+  </ul>
+  <div class="nav-right" id="nav-right"></div>
+  <button class="theme-btn" id="theme-toggle" title="Toggle theme">☾</button>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <h1>Graph Traversal</h1>
+      <p>Visualize BFS and DFS on an interactive graph — click nodes to set start</p>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <span class="badge" id="hdr-algo">BFS</span>
+      <span class="badge">Time: O(V + E)</span>
+      <span class="badge">Space: O(V)</span>
+    </div>
+  </div>
+</div>
+
+<div class="controls-bar">
+  <div class="controls-inner">
+    <span class="ctrl-label">Algorithm</span>
+    <select class="ctrl-select" id="algo-select" onchange="onAlgoChange()">
+      <option value="bfs">BFS — Breadth-First Search</option>
+      <option value="dfs">DFS — Depth-First Search</option>
+    </select>
+    <span class="ctrl-label">Start node</span>
+    <select class="ctrl-select" id="start-node" style="width:60px">
+      <option>A</option><option>B</option><option>C</option><option>D</option>
+      <option>E</option><option>F</option><option>G</option>
+    </select>
+    <div class="ctrl-sep"></div>
+    <span class="ctrl-label">Graph</span>
+    <select class="ctrl-select" id="graph-preset" onchange="loadPreset()">
+      <option value="default">Default (7 nodes)</option>
+      <option value="tree">Tree-like</option>
+      <option value="dense">Dense graph</option>
+      <option value="linear">Linear chain</option>
+    </select>
+    <div class="ctrl-sep"></div>
+    <span class="ctrl-label">Speed</span>
+    <input type="range" class="speed-range" id="speed" min="1" max="10" value="5"/>
+    <span id="speed-val" style="font-size:11px;color:var(--text-3);font-family:var(--mono)">5</span>
+    <div class="ctrl-sep"></div>
+    <button class="btn btn-primary btn-sm" id="btn-run" onclick="runTraversal()">▶ Run</button>
+    <button class="btn btn-sm" onclick="resetGraph()">↺ Reset</button>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="two-col">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title" id="graph-title">BFS — Breadth-First Search</span>
+        <span class="badge" id="graph-info">7 nodes, 8 edges</span>
+      </div>
+      <div class="graph-canvas-wrap">
+        <svg id="graph-svg"></svg>
+      </div>
+      <div class="ds-display" id="ds-display">
+        <span class="ds-label" id="ds-label">Queue:</span>
+        <span id="ds-items" style="display:flex;gap:4px;flex-wrap:wrap"></span>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-box" style="background:var(--surface);border:2px solid var(--blue)"></div>Start node</div>
+        <div class="legend-item"><div class="legend-box" style="background:var(--blue-light);border:2px solid var(--blue)"></div>Visiting</div>
+        <div class="legend-item"><div class="legend-box" style="background:var(--orange-light,#fff7ed);border:2px solid var(--orange)"></div>In queue/stack</div>
+        <div class="legend-item"><div class="legend-box" style="background:var(--green-light);border:2px solid var(--green)"></div>Visited</div>
+      </div>
+      <div class="status-line" id="graph-status">Select an algorithm and press ▶ Run</div>
+    </div>
+
+    <div class="right">
+      <div class="card">
+        <div class="card-header"><span class="card-title">Pseudocode</span></div>
+        <div class="code-block" id="graph-code"></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Visit Order</span></div>
+        <div style="padding:12px 14px;font-family:var(--mono);font-size:13px;min-height:40px">
+          <div style="font-size:11px;color:var(--text-3);margin-bottom:6px">NODES VISITED IN ORDER:</div>
+          <div id="visit-order" style="display:flex;gap:4px;flex-wrap:wrap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BFS vs DFS comparison -->
+  <div class="card mt-20">
+    <div class="card-header"><span class="card-title">BFS vs DFS — When to Use Each</span></div>
+    <table class="bigo-table">
+      <thead><tr><th>Property</th><th>BFS</th><th>DFS</th></tr></thead>
+      <tbody>
+        <tr><td>Data structure</td><td>Queue (FIFO)</td><td>Stack / Recursion</td></tr>
+        <tr><td>Time complexity</td><td class="mono">O(V + E)</td><td class="mono">O(V + E)</td></tr>
+        <tr><td>Space complexity</td><td class="mono">O(V)</td><td class="mono">O(V)</td></tr>
+        <tr><td>Shortest path?</td><td>Yes (unweighted)</td><td>No guarantee</td></tr>
+        <tr><td>Best for</td><td>Shortest path, level-order</td><td>Cycle detection, topological sort</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card mt-16">
+    <div class="card-header"><span class="card-title">How Graph Traversal Works</span></div>
+    <div class="how-summary">Both BFS and DFS systematically visit every node in a graph. The difference is the order of visiting — BFS explores all neighbours first (level by level) while DFS dives as deep as possible before backtracking.</div>
+    <div class="how-list">
+      <div class="how-item"><div class="how-num">1</div><div class="how-text"><strong>BFS uses a Queue:</strong> Enqueue the start node. Dequeue it, mark as visited, enqueue all unvisited neighbours. Repeat until the queue is empty.</div></div>
+      <div class="how-item"><div class="how-num">2</div><div class="how-text"><strong>DFS uses a Stack (or recursion):</strong> Push the start node. Pop it, mark as visited, push all unvisited neighbours. Dive deep before going wide.</div></div>
+      <div class="how-item"><div class="how-num">3</div><div class="how-text"><strong>Visited set:</strong> Both algorithms keep track of visited nodes to avoid revisiting them in graphs with cycles.</div></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">DSA Visualizer — Learn Algorithms Step by Step</footer>
+<script src="js/main.js"></script>
+<script src="js/graphs.js"></script>
+</body>
+</html>

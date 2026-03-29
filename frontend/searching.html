@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Searching — DSA Visualizer</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* Search-specific styles */
+    .search-array {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 28px 16px 16px;
+      overflow-x: auto;
+      min-height: 100px;
+      flex-wrap: nowrap;
+    }
+    .search-cell {
+      min-width: 48px;
+      height: 52px;
+      border: 1.5px solid var(--border-2);
+      border-radius: var(--radius);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 15px;
+      font-weight: 600;
+      position: relative;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .search-cell .cell-idx {
+      position: absolute;
+      bottom: -18px;
+      font-size: 9px;
+      color: var(--text-3);
+      font-family: var(--mono);
+    }
+    .search-cell .cell-ptr {
+      position: absolute;
+      top: -22px;
+      font-size: 10px;
+      font-weight: 700;
+      font-family: var(--mono);
+      white-space: nowrap;
+    }
+    .search-cell.checking  { border-color: var(--blue); background: var(--blue-light); color: var(--blue); }
+    .search-cell.found     { border-color: var(--green); background: var(--green-light); color: var(--green); }
+    .search-cell.eliminated{ background: var(--surface-2); color: var(--text-3); border-color: var(--border); }
+    .search-cell.range-active { border-color: var(--orange); }
+    .ptr-low  { color: var(--orange); }
+    .ptr-mid  { color: var(--blue); }
+    .ptr-high { color: var(--red); }
+
+    /* Jump search block highlight */
+    .search-cell.block-start { border-left: 3px solid var(--orange); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">DSA Visualizer</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sorting.html">Sorting</a></li>
+    <li><a href="searching.html" class="active">Searching</a></li>
+    <li><a href="trees.html">Trees</a></li>
+    <li><a href="graphs.html">Graphs</a></li>
+    <li><a href="hashing.html">Hashing</a></li>
+    <li><a href="linked-list.html">Linked List</a></li>
+    <li><a href="stack.html">Stack</a></li>
+    <li><a href="queue.html">Queue</a></li>
+    <li><a href="practice.html">Practice</a></li>
+  </ul>
+  <div class="nav-right" id="nav-right"></div>
+  <button class="theme-btn" id="theme-toggle" title="Toggle theme">☾</button>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <h1>Searching Algorithms</h1>
+      <p>Find an element in an array — step by step with pointer animations</p>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <span class="badge" id="hdr-algo">Linear Search</span>
+      <span class="badge" id="hdr-complexity">Time: O(n)</span>
+      <span class="badge" id="hdr-space">Space: O(1)</span>
+    </div>
+  </div>
+</div>
+
+<div class="controls-bar">
+  <div class="controls-inner">
+    <span class="ctrl-label">Algorithm</span>
+    <select class="ctrl-select" id="algo-select" onchange="onAlgoChange()">
+      <option value="linear">Linear Search</option>
+      <option value="binary">Binary Search</option>
+      <option value="jump">Jump Search</option>
+    </select>
+    <span class="ctrl-label">Array</span>
+    <input class="ctrl-input" type="text" id="arr-input" value="3,7,11,15,18,22,27,35,42,50" style="width:220px"/>
+    <button class="btn btn-sm" onclick="applyArray()">Apply</button>
+    <button class="btn btn-sm" onclick="randomArray()">Random</button>
+    <div class="ctrl-sep"></div>
+    <span class="ctrl-label">Search for</span>
+    <input class="ctrl-input" type="number" id="target-input" value="27" style="width:70px"/>
+    <div class="ctrl-sep"></div>
+    <span class="ctrl-label">Speed</span>
+    <input type="range" class="speed-range" id="speed" min="1" max="10" value="5"/>
+    <span id="speed-val" style="font-size:11px;color:var(--text-3);min-width:12px;font-family:var(--mono)">5</span>
+    <div class="ctrl-sep"></div>
+    <button class="btn btn-primary btn-sm" id="btn-run" onclick="runSearch()">▶ Search</button>
+    <button class="btn btn-sm" onclick="resetSearch()">↺ Reset</button>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="two-col">
+    <!-- Left: visualization -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title" id="viz-title">Linear Search</span>
+        <span class="badge" id="viz-ops">0 comparisons</span>
+      </div>
+      <div class="search-array" id="search-array"></div>
+      <!-- Legend -->
+      <div class="legend">
+        <div class="legend-item"><div class="legend-box" style="background:var(--blue-light);border:1.5px solid var(--blue)"></div>Checking</div>
+        <div class="legend-item"><div class="legend-box" style="background:var(--green-light);border:1.5px solid var(--green)"></div>Found</div>
+        <div class="legend-item"><div class="legend-box" style="background:var(--surface-2);border:1.5px solid var(--border)"></div>Eliminated</div>
+        <div class="legend-item"><div class="legend-box" style="background:var(--surface);border:1.5px solid var(--orange)"></div>Range boundary</div>
+      </div>
+      <div class="status-line" id="status-line">Choose an algorithm, set the target, and press ▶ Search</div>
+    </div>
+
+    <!-- Right: code + complexity -->
+    <div class="right">
+      <div class="card">
+        <div class="card-header"><span class="card-title">Pseudocode</span></div>
+        <div class="code-block" id="code-block"></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Complexity</span></div>
+        <div class="complexity-grid" id="complexity-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div class="card mt-20">
+    <div class="card-header"><span class="card-title" id="how-title">How Linear Search Works</span></div>
+    <div class="how-summary" id="how-summary"></div>
+    <div class="how-list" id="how-list"></div>
+  </div>
+
+  <!-- Comparison table -->
+  <div class="card mt-16">
+    <div class="card-header"><span class="card-title">Searching Algorithms — Quick Reference</span></div>
+    <table class="bigo-table">
+      <thead><tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Space</th><th>Requires Sorted?</th></tr></thead>
+      <tbody>
+        <tr data-algo="linear"><td>Linear Search</td><td class="mono">O(1)</td><td class="mono">O(n)</td><td class="mono">O(n)</td><td class="mono">O(1)</td><td>No</td></tr>
+        <tr data-algo="binary"><td>Binary Search</td><td class="mono">O(1)</td><td class="mono">O(log n)</td><td class="mono">O(log n)</td><td class="mono">O(1)</td><td>Yes ✓</td></tr>
+        <tr data-algo="jump">  <td>Jump Search</td>  <td class="mono">O(1)</td><td class="mono">O(√n)</td><td class="mono">O(√n)</td><td class="mono">O(1)</td><td>Yes ✓</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer class="footer">DSA Visualizer — Learn Algorithms Step by Step</footer>
+<script src="js/main.js"></script>
+<script src="js/searching.js"></script>
+</body>
+</html>

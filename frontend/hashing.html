@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hashing — DSA Visualizer</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* Hash table grid */
+    .hash-table-wrap { padding: 16px; overflow-x: auto; }
+    .hash-table-grid { display: flex; flex-direction: column; gap: 4px; min-width: 400px; }
+    .hash-bucket {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 44px;
+    }
+    .bucket-index {
+      width: 36px; height: 40px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 12px;
+      color: var(--text-3); font-weight: 500;
+      flex-shrink: 0;
+    }
+    .bucket-slot {
+      height: 40px; min-width: 80px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 13px; font-weight: 600;
+      transition: all 0.25s;
+      position: relative;
+      padding: 0 12px;
+    }
+    .bucket-slot.empty    { color: var(--text-3); font-weight: 400; }
+    .bucket-slot.inserting{ border-color: var(--blue); background: var(--blue-light); color: var(--blue); animation: popIn 0.3s ease; }
+    .bucket-slot.found    { border-color: var(--green); background: var(--green-light); color: var(--green); }
+    .bucket-slot.deleting { border-color: var(--red); background: var(--red-light); color: var(--red); opacity: 0.5; }
+    .bucket-slot.collision{ border-color: var(--orange); background: var(--orange-light,#fff7ed); }
+    @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .bucket-arrow { color: var(--text-3); font-size: 14px; }
+
+    /* Hash computation display */
+    .hash-formula {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-2);
+      min-height: 32px;
+      background: var(--surface-2);
+    }
+    .hash-step { display: inline-flex; align-items: center; gap: 6px; margin-right: 12px; }
+    .hash-highlight { background: var(--blue-light); color: var(--blue); padding: 1px 6px; border-radius: 3px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">DSA Visualizer</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sorting.html">Sorting</a></li>
+    <li><a href="searching.html">Searching</a></li>
+    <li><a href="trees.html">Trees</a></li>
+    <li><a href="graphs.html">Graphs</a></li>
+    <li><a href="hashing.html" class="active">Hashing</a></li>
+    <li><a href="linked-list.html">Linked List</a></li>
+    <li><a href="stack.html">Stack</a></li>
+    <li><a href="queue.html">Queue</a></li>
+    <li><a href="practice.html">Practice</a></li>
+  </ul>
+  <div class="nav-right" id="nav-right"></div>
+  <button class="theme-btn" id="theme-toggle" title="Toggle theme">☾</button>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <h1>Hash Table</h1>
+      <p>Insert, search and delete — see how the hash function maps keys to buckets</p>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <span class="badge badge-green">Insert: O(1) avg</span>
+      <span class="badge badge-green">Search: O(1) avg</span>
+      <span class="badge badge-orange">Worst: O(n)</span>
+    </div>
+  </div>
+</div>
+
+<div class="controls-bar">
+  <div class="controls-inner">
+    <span class="ctrl-label">Key</span>
+    <input class="ctrl-input" type="text" id="hash-key" placeholder="e.g. apple" style="width:120px" maxlength="12"/>
+    <button class="btn btn-primary btn-sm" onclick="hashInsert()">Insert</button>
+    <button class="btn btn-sm" onclick="hashSearch()">Search</button>
+    <button class="btn btn-sm" onclick="hashDelete()">Delete</button>
+    <div class="ctrl-sep"></div>
+    <span class="ctrl-label">Table size</span>
+    <select class="ctrl-select" id="table-size" onchange="resizeTable()">
+      <option value="7">7 buckets</option>
+      <option value="11" selected>11 buckets</option>
+      <option value="13">13 buckets</option>
+    </select>
+    <span class="ctrl-label">Method</span>
+    <select class="ctrl-select" id="collision-method">
+      <option value="chaining">Chaining</option>
+      <option value="linear">Linear Probing</option>
+    </select>
+    <div class="ctrl-sep"></div>
+    <button class="btn btn-sm" onclick="hashReset()">↺ Reset</button>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="two-col">
+    <!-- Hash table visualization -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Hash Table (size = <span id="tbl-size-label">11</span>)</span>
+        <span class="badge" id="hash-fill">0 / 11 filled</span>
+      </div>
+      <div class="hash-table-wrap">
+        <div class="hash-table-grid" id="hash-grid"></div>
+      </div>
+      <div class="hash-formula" id="hash-formula">
+        hash(key) = sum of char codes % table_size
+      </div>
+      <div class="status-line" id="hash-status">Enter a key and press Insert to add it to the table</div>
+    </div>
+
+    <!-- Code + complexity -->
+    <div class="right">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Pseudocode</span>
+          <span class="badge" id="hash-op">insert</span>
+        </div>
+        <div class="code-block" id="hash-code"></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Hash Function</span></div>
+        <div style="padding:14px;font-family:var(--mono);font-size:12px;color:var(--text-2);line-height:2">
+          <div style="margin-bottom:8px">hash(key) =</div>
+          <div style="padding-left:16px;color:var(--blue)">Σ charCode(key[i])</div>
+          <div style="padding-left:16px">% table_size</div>
+          <div id="live-calc" style="margin-top:12px;padding:8px;background:var(--surface-2);border-radius:var(--radius);min-height:24px;font-size:11px;color:var(--text-3)">
+            Type a key to see the hash computed live
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Complexity</span></div>
+        <table class="info-table">
+          <tr><td>Insert (avg)</td><td>O(1)</td></tr>
+          <tr><td>Search (avg)</td><td>O(1)</td></tr>
+          <tr><td>Delete (avg)</td><td>O(1)</td></tr>
+          <tr><td>Insert (worst)</td><td>O(n)</td></tr>
+          <tr><td>Space</td><td>O(n)</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div class="card mt-20">
+    <div class="card-header"><span class="card-title">How Hash Tables Work</span></div>
+    <div class="how-summary">A hash table stores key-value pairs. It uses a hash function to convert a key into an index — O(1) on average. When two keys hash to the same index (a collision), we handle it with chaining (linked list at each bucket) or linear probing (try the next slot).</div>
+    <div class="how-list">
+      <div class="how-item"><div class="how-num">1</div><div class="how-text"><strong>Hash function:</strong> Maps a key to an index. We sum the character codes of the key and take modulo table_size.</div></div>
+      <div class="how-item"><div class="how-num">2</div><div class="how-text"><strong>Collision — Chaining:</strong> If two keys hash to the same bucket, both are stored in a linked list at that bucket. Lookup scans the chain.</div></div>
+      <div class="how-item"><div class="how-num">3</div><div class="how-text"><strong>Collision — Linear Probing:</strong> If a bucket is occupied, try the next one (index + 1) % size, and so on until an empty slot is found.</div></div>
+      <div class="how-item"><div class="how-num">4</div><div class="how-text"><strong>Load factor:</strong> n/m (items / buckets). Keep it below 0.7 for good average performance. Resize the table when it gets too full.</div></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">DSA Visualizer — Learn Algorithms Step by Step</footer>
+<script src="js/main.js"></script>
+<script src="js/hashing.js"></script>
+</body>
+</html>

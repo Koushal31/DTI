@@ -1,0 +1,21 @@
+services:
+  # Web Service for Node.js Backend & Static Frontend
+  - type: web
+    name: dsaviz
+    env: node
+    # Since all server code is in /backend, we set the root directory to that folder
+    rootDir: backend
+    # Install dependencies inside the backend folder
+    buildCommand: npm install
+    # Start the server
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: ~18.16.0 # Ensure compatibility
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        # Connect this to your Mongo Atlas string via the Render Dashboard
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true

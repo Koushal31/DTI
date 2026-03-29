@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trees — DSA Visualizer</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* SVG-based tree canvas */
+    .tree-canvas-wrap {
+      padding: 16px;
+      overflow: auto;
+      min-height: 320px;
+      background: var(--surface);
+    }
+    #tree-svg {
+      display: block;
+      min-width: 600px;
+      width: 100%;
+    }
+
+    /* Tree node circles */
+    .tree-node circle {
+      fill: var(--surface);
+      stroke: var(--border-2);
+      stroke-width: 1.5;
+      transition: fill 0.2s, stroke 0.2s;
+    }
+    .tree-node.visiting circle { fill: var(--blue-light); stroke: var(--blue); stroke-width: 2; }
+    .tree-node.found    circle { fill: var(--green-light); stroke: var(--green); stroke-width: 2; }
+    .tree-node.path     circle { fill: var(--orange-light, #fff7ed); stroke: var(--orange); stroke-width: 2; }
+    .tree-node text {
+      font-family: var(--mono, monospace);
+      font-size: 13px;
+      font-weight: 600;
+      fill: var(--text);
+      text-anchor: middle;
+      dominant-baseline: central;
+      pointer-events: none;
+    }
+    .tree-edge { stroke: var(--border-2); stroke-width: 1.5; fill: none; transition: stroke 0.2s; }
+    .tree-edge.active { stroke: var(--blue); stroke-width: 2.5; }
+
+    /* Traversal result display */
+    .traversal-result {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-2);
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .traversal-label { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.06em; }
+    .trav-val {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 28px;
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 12px; font-weight: 600;
+      transition: background 0.15s;
+    }
+    .trav-val.current { background: var(--blue-light); border-color: var(--blue); color: var(--blue); }
+    .trav-val.done    { background: var(--green-light); border-color: var(--green); color: var(--green); }
+    .op-tabs { display: flex; gap: 4px; padding: 10px 14px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .op-tab  { padding: 3px 10px; border-radius: 99px; font-size: 11px; border: 1px solid var(--border); background: none; color: var(--text-2); cursor: pointer; transition: all 0.12s; }
+    .op-tab:hover  { background: var(--surface-2); }
+    .op-tab.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">DSA Visualizer</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sorting.html">Sorting</a></li>
+    <li><a href="searching.html">Searching</a></li>
+    <li><a href="trees.html" class="active">Trees</a></li>
+    <li><a href="graphs.html">Graphs</a></li>
+    <li><a href="hashing.html">Hashing</a></li>
+    <li><a href="linked-list.html">Linked List</a></li>
+    <li><a href="stack.html">Stack</a></li>
+    <li><a href="queue.html">Queue</a></li>
+    <li><a href="practice.html">Practice</a></li>
+  </ul>
+  <div class="nav-right" id="nav-right"></div>
+  <button class="theme-btn" id="theme-toggle" title="Toggle theme">☾</button>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <h1>Binary Search Tree</h1>
+      <p>Insert, delete, search nodes — visualize BST traversals in real time</p>
+    </div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <span class="badge">Insert: O(log n)</span>
+      <span class="badge">Search: O(log n)</span>
+      <span class="badge badge-orange">Worst: O(n)</span>
+    </div>
+  </div>
+</div>
+
+<div class="controls-bar">
+  <div class="controls-inner">
+    <span class="ctrl-label">Value</span>
+    <input class="ctrl-input" type="number" id="node-val" placeholder="e.g. 42" style="width:80px"/>
+    <button class="btn btn-primary btn-sm" onclick="bstInsert()">Insert</button>
+    <button class="btn btn-sm" onclick="bstSearch()">Search</button>
+    <button class="btn btn-sm" onclick="bstDelete()">Delete</button>
+    <div class="ctrl-sep"></div>
+    <span class="ctrl-label">Traversal</span>
+    <button class="btn btn-sm" onclick="bstTraverse('inorder')">Inorder</button>
+    <button class="btn btn-sm" onclick="bstTraverse('preorder')">Preorder</button>
+    <button class="btn btn-sm" onclick="bstTraverse('postorder')">Postorder</button>
+    <button class="btn btn-sm" onclick="bstTraverse('levelorder')">Level Order</button>
+    <div class="ctrl-sep"></div>
+    <span class="ctrl-label">Speed</span>
+    <input type="range" class="speed-range" id="speed" min="1" max="10" value="5"/>
+    <span id="speed-val" style="font-size:11px;color:var(--text-3);font-family:var(--mono)">5</span>
+    <div class="ctrl-sep"></div>
+    <button class="btn btn-sm" onclick="bstReset()">↺ Reset</button>
+  </div>
+</div>
+
+<div class="page-body">
+  <div class="two-col">
+    <!-- Tree visualization -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Binary Search Tree</span>
+        <span class="badge" id="tree-size">0 nodes</span>
+      </div>
+      <div class="op-tabs" id="op-tabs">
+        <button class="op-tab active" id="tab-insert">insert</button>
+        <button class="op-tab" id="tab-search">search</button>
+        <button class="op-tab" id="tab-delete">delete</button>
+        <button class="op-tab" id="tab-traversal">traversal</button>
+      </div>
+      <div class="tree-canvas-wrap">
+        <svg id="tree-svg" height="280"></svg>
+      </div>
+      <div class="traversal-result" id="traversal-result" style="display:none">
+        <span class="traversal-label" id="trav-label">Inorder:</span>
+        <div id="trav-values" style="display:flex;gap:4px;flex-wrap:wrap"></div>
+      </div>
+      <div class="status-line" id="tree-status">Insert values to build your BST. Try: 50, 30, 70, 20, 40</div>
+    </div>
+
+    <!-- Code + complexity -->
+    <div class="right">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Pseudocode</span>
+          <span class="badge" id="tree-op-badge">insert</span>
+        </div>
+        <div class="code-block" id="tree-code"></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">BST Properties</span></div>
+        <table class="info-table" style="font-size:13px">
+          <tr><td>Insert</td><td>O(log n) avg, O(n) worst</td></tr>
+          <tr><td>Search</td><td>O(log n) avg, O(n) worst</td></tr>
+          <tr><td>Delete</td><td>O(log n) avg, O(n) worst</td></tr>
+          <tr><td>Space</td><td>O(n)</td></tr>
+          <tr><td>Balanced?</td><td>Only if lucky or AVL/RB tree</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div class="card mt-20">
+    <div class="card-header"><span class="card-title">How a Binary Search Tree Works</span></div>
+    <div class="how-summary">A BST is a binary tree where every node's left subtree contains only values smaller than the node, and the right subtree contains only larger values. This property makes searching O(log n) on average — each comparison eliminates half the remaining nodes.</div>
+    <div class="how-list">
+      <div class="how-item"><div class="how-num">1</div><div class="how-text"><strong>Insert:</strong> Start at the root. If the new value is smaller, go left; if larger, go right. Repeat until you find an empty spot, then place the node there.</div></div>
+      <div class="how-item"><div class="how-num">2</div><div class="how-text"><strong>Search:</strong> Same logic as insert — compare with the current node and go left or right. If the value matches, you found it.</div></div>
+      <div class="how-item"><div class="how-num">3</div><div class="how-text"><strong>Delete:</strong> Three cases: leaf (just remove), one child (replace with child), two children (replace with inorder successor — smallest value in the right subtree).</div></div>
+      <div class="how-item"><div class="how-num">4</div><div class="how-text"><strong>Inorder traversal</strong> visits Left → Node → Right and produces values in sorted ascending order — a key property of BSTs.</div></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">DSA Visualizer — Learn Algorithms Step by Step</footer>
+<script src="js/main.js"></script>
+<script src="js/trees.js"></script>
+</body>
+</html>

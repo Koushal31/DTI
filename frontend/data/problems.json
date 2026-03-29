@@ -1,0 +1,3519 @@
+[
+  {
+    "id": "q1",
+    "category": "ARRAYS",
+    "title": "Majority Element",
+    "link": "https://leetcode.com/problems/majority-element/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/_xqIp2rj8bo?t=882",
+    "companies": [
+      "Amazon",
+      "Google"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "ARRAYS",
+    "title": "Repeat & missing number",
+    "link": "https://leetcode.com/problems/find-missing-and-repeated-values/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/0Fxc_jKj2vo?t=1321",
+    "companies": [
+      "Amazon"
+    ],
+    "prerequisites": "Hashing"
+  },
+  {
+    "id": "q3",
+    "category": "ARRAYS",
+    "title": "Merge 2 sorted array without xtra space",
+    "link": "https://leetcode.com/problems/merge-sorted-array/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=-1cLK6PaLsQ&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=27",
+    "companies": [
+      "Amdocs",
+      "Brocade",
+      "Goldman",
+      "Sachs",
+      "Juniper",
+      "Networks",
+      "Linkedin",
+      "Microsoft",
+      "Quikr",
+      "Snapdeal",
+      "Synopsys",
+      "Zoho",
+      "Adobe"
+    ],
+    "prerequisites": "Sorting"
+  },
+  {
+    "id": "q4",
+    "category": "ARRAYS",
+    "title": "Single Number",
+    "link": "https://leetcode.com/problems/single-number/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/NWg38xWYzEg?t=1393",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "ARRAYS",
+    "title": "Stock Buy & Sell",
+    "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/WBzZCm46mFo?t=835",
+    "companies": [
+      "Amazon",
+      "DEShaw",
+      "Directi",
+      "Flipkart",
+      "Goldman",
+      "Sachs",
+      "Intuit",
+      "MakeMyTrip",
+      "Microsoft",
+      "Ola",
+      "Cabs",
+      "Oracle",
+      "Paytm",
+      "Pubmatic",
+      "Quikr",
+      "Salesforce",
+      "Sapient",
+      "Swiggy",
+      "Walmart",
+      "Media.net",
+      "Google"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "ARRAYS",
+    "title": "Kadane's Algorithm",
+    "link": "https://leetcode.com/problems/maximum-subarray/description/",
+    "difficulty": "Medium",
+    "video": "https://youtu.be/9IZYqostl2M?t=760",
+    "companies": [
+      "Microsoft",
+      "Facebook"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "ARRAYS",
+    "title": "Pow xn",
+    "link": "https://leetcode.com/problems/powx-n/description/",
+    "difficulty": "Medium",
+    "video": "https://youtu.be/WBzZCm46mFo?t=21",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "ARRAYS",
+    "title": "Container with most water",
+    "link": "https://leetcode.com/problems/container-with-most-water/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=EbkMABpP52U",
+    "companies": [
+      "Flipkart",
+      "Dunzo"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "ARRAYS",
+    "title": "Sort array of 0s, 1s & 2s",
+    "link": "https://leetcode.com/problems/sort-colors/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=J48aGjfjYTI&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=26",
+    "companies": [
+      "Microsoft",
+      "Amazon",
+      "MakeMyTrip"
+    ],
+    "prerequisites": "Sorting"
+  },
+  {
+    "id": "q10",
+    "category": "ARRAYS",
+    "title": "3Sum",
+    "link": "https://leetcode.com/problems/3sum/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=K-RsltkN63w",
+    "companies": [
+      "Adobe",
+      "Amazon",
+      "Microsoft",
+      "Morgan",
+      "Stanley",
+      "Samsung",
+      "Snapdeal",
+      "Times",
+      "Internet"
+    ],
+    "prerequisites": "Hashing"
+  },
+  {
+    "id": "q11",
+    "category": "ARRAYS",
+    "title": "4Sum",
+    "link": "https://leetcode.com/problems/4sum/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=X6sL8JTROLY",
+    "companies": [],
+    "prerequisites": "Hashing"
+  },
+  {
+    "id": "q12",
+    "category": "ARRAYS",
+    "title": "Search a 2D matrix",
+    "link": "https://leetcode.com/problems/search-a-2d-matrix/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=LEFFjgt5i6w&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=37",
+    "companies": [],
+    "prerequisites": "2D Array"
+  },
+  {
+    "id": "q13",
+    "category": "ARRAYS",
+    "title": "Next permutation",
+    "link": "https://leetcode.com/problems/next-permutation/description/",
+    "difficulty": "Medium",
+    "video": "https://youtu.be/-1cLK6PaLsQ?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;t=967",
+    "companies": [
+      "Adobe",
+      "GoldmanSachs",
+      "Uber"
+    ],
+    "prerequisites": "Sorting"
+  },
+  {
+    "id": "q14",
+    "category": "ARRAYS",
+    "title": "Merge overlapping intervals",
+    "link": "https://leetcode.com/problems/merge-intervals/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google"
+    ],
+    "prerequisites": "Sorting"
+  },
+  {
+    "id": "q15",
+    "category": "ARRAYS",
+    "title": "Longest substring without repeating",
+    "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "MorganStanley",
+      "Amazon"
+    ],
+    "prerequisites": "String"
+  },
+  {
+    "id": "q16",
+    "category": "ARRAYS",
+    "title": "Set matrix zeroes",
+    "link": "https://leetcode.com/problems/set-matrix-zeroes/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Microsoft",
+      "Amazon"
+    ],
+    "prerequisites": "Sets"
+  },
+  {
+    "id": "q17",
+    "category": "ARRAYS",
+    "title": "Word search",
+    "link": "https://leetcode.com/problems/word-search/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Ola",
+      "GoldmanSachs",
+      "Google"
+    ],
+    "prerequisites": "Recursion"
+  },
+  {
+    "id": "q18",
+    "category": "ARRAYS",
+    "title": "Product of array except itself",
+    "link": "https://leetcode.com/problems/product-of-array-except-self/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=TW2m8m_FNJE",
+    "companies": [
+      "Amazon",
+      "DEShaw",
+      "Intuit",
+      "MorganStanley",
+      "Flipkart"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q19",
+    "category": "ARRAYS",
+    "title": "Subarray sum equals k",
+    "link": "https://leetcode.com/problems/subarray-sum-equals-k/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [],
+    "prerequisites": "Hashing"
+  },
+  {
+    "id": "q20",
+    "category": "ARRAYS",
+    "title": "Find Duplicate",
+    "link": "https://leetcode.com/problems/find-the-duplicate-number/",
+    "difficulty": "Medium",
+    "video": "https://youtu.be/0Fxc_jKj2vo?t=2000",
+    "companies": [
+      "Amazon",
+      "D-E-Shaw",
+      "Flipkart",
+      "Paytm",
+      "Qualcomm",
+      "Zoho"
+    ],
+    "prerequisites": "LL Cycles"
+  },
+  {
+    "id": "q21",
+    "category": "ARRAYS",
+    "title": "Count Inversions",
+    "link": "https://www.hackerrank.com/challenges/ctci-merge-sort/problem",
+    "difficulty": "Medium / Hard",
+    "video": null,
+    "companies": [
+      "Adobe",
+      "Amazon",
+      "BankBazaar",
+      "Flipkart",
+      "Microsoft",
+      "Myntra",
+      "MakeMyTrip"
+    ],
+    "prerequisites": "Merge Sort"
+  },
+  {
+    "id": "q22",
+    "category": "ARRAYS",
+    "title": "Trapping Rainwater",
+    "link": "https://leetcode.com/problems/trapping-rain-water/description/",
+    "difficulty": "Hard",
+    "video": "https://youtu.be/UHHp8USwx4M?t=513",
+    "companies": [
+      "Samsung"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q23",
+    "category": "ARRAYS",
+    "title": "Sliding window maximum",
+    "link": "https://leetcode.com/problems/sliding-window-maximum/description/",
+    "difficulty": "Hard",
+    "video": "https://www.youtube.com/watch?v=XwG5cozqfaM",
+    "companies": [
+      "Amazon",
+      "Directi",
+      "Flipkart",
+      "Microsoft",
+      "Google"
+    ],
+    "prerequisites": "Hashing"
+  },
+  {
+    "id": "q24",
+    "category": "ARRAYS",
+    "title": "Reverse pairs",
+    "link": "https://leetcode.com/problems/reverse-pairs/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [],
+    "prerequisites": "Merge Sort"
+  },
+  {
+    "id": "q25",
+    "category": "ARRAYS",
+    "title": "Largest rectangle in a histogram",
+    "link": "https://leetcode.com/problems/largest-rectangle-in-histogram/description/",
+    "difficulty": "Hard",
+    "video": "https://www.youtube.com/watch?v=ysy1o-QEj3k",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "BINARY SEARCH",
+    "title": "Search in rotated sorted",
+    "link": "https://leetcode.com/problems/search-in-rotated-sorted-array/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=6WNZQBHWQJs",
+    "companies": [
+      "Microsoft",
+      "Google",
+      "Adobe",
+      "Amazon",
+      "D-E-Shaw",
+      "Flipkart",
+      "Hike",
+      "Intuit",
+      "MakeMyTrip",
+      "Paytm",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "BINARY SEARCH",
+    "title": "Peak index in mountain array",
+    "link": "https://leetcode.com/problems/peak-index-in-a-mountain-array/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=RjxD6UXGlhc",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "BINARY SEARCH",
+    "title": "Single element in sorted array",
+    "link": "https://leetcode.com/problems/single-element-in-a-sorted-array/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=qsbCBduIs40",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "BINARY SEARCH",
+    "title": "Allocate Minimum Pages (Book Allocation)",
+    "link": "https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=JRAByolWqhw",
+    "companies": [
+      "Google",
+      "Infosys",
+      "Codenation",
+      "Amazon",
+      "Microsoft"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "BINARY SEARCH",
+    "title": "Painter’s Partition",
+    "link": "https://www.hackerearth.com/problem/algorithm/painters-partition/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=srsFN5OHBgw",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "BINARY SEARCH",
+    "title": "Aggressive cows",
+    "link": "https://www.spoj.com/problems/AGGRCOW/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=7wOzDqsfXy0",
+    "companies": [
+      "Adobe"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "BINARY SEARCH",
+    "title": "Median of 2 Sorted Arrays",
+    "link": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Amazon",
+      "Samsung",
+      "Microsoft",
+      "Google"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "STRINGS",
+    "title": "Valid Palindrome",
+    "link": "https://leetcode.com/problems/valid-palindrome/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=dSRFgEs3a6A&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=31",
+    "companies": [
+      "Amazon",
+      "Cisco",
+      "DEShaw",
+      "Facebook",
+      "FactSet",
+      "MorganStanley",
+      "Paytm",
+      "Zoho"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "STRINGS",
+    "title": "Longest Common Prefix",
+    "link": "https://leetcode.com/problems/longest-common-prefix/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "Adobe",
+      "Blinkit",
+      "Dunzo"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "STRINGS",
+    "title": "Valid Anagram",
+    "link": "https://leetcode.com/problems/valid-anagram/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "Google",
+      "Adobe",
+      "Flipkart",
+      "Nagarro",
+      "Media.net",
+      "Directi"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "STRINGS",
+    "title": "Reverse Words in String",
+    "link": "https://leetcode.com/problems/reverse-words-in-a-string/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=RitppzIdMCo&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=33",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "STRINGS",
+    "title": "Remove All Occurrences of String",
+    "link": "https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/",
+    "difficulty": "Medium",
+    "video": "https://youtu.be/dSRFgEs3a6A?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;t=823",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "STRINGS",
+    "title": "Permutation in String",
+    "link": "https://leetcode.com/problems/permutation-in-string/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=VXewy91P0S4&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=32",
+    "companies": [
+      "Adobe",
+      "GoldmanSachs",
+      "Uber"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "STRINGS",
+    "title": "String Compression",
+    "link": "https://leetcode.com/problems/string-compression/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=cAB15h6-sWA&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=34",
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "STRINGS",
+    "title": "Group Anagrams",
+    "link": "https://leetcode.com/problems/group-anagrams/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Samsung",
+      "Adobe",
+      "Amazon"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "STRINGS",
+    "title": "Minimum Window Substring",
+    "link": "https://leetcode.com/problems/minimum-window-substring/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Amazon",
+      "Google",
+      "MakeMyTrip",
+      "Streamoid",
+      "Technologies",
+      "Microsoft",
+      "Media.net",
+      "Atlassian",
+      "Flipkart"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q10",
+    "category": "STRINGS",
+    "title": "Kmp Algorithm",
+    "link": "https://leetcode.com/problems/longest-happy-prefix/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q11",
+    "category": "STRINGS",
+    "title": "Robin Karp",
+    "link": "#",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Combination Sum I",
+    "link": "https://leetcode.com/problems/combination-sum/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=jkgZw2WEaqA&amp;list=PLfqMhTWNBTe2C_dQAP1UoemcgAxBTlItp&amp;index=9",
+    "companies": [
+      "Adobe",
+      "Amazon",
+      "Microsoft",
+      "oracle,",
+      "DE",
+      "shaw",
+      ",salesforce",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Combination Sum II",
+    "link": "https://leetcode.com/problems/combination-sum-ii/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Adobe",
+      "Amazon",
+      "Microsoft",
+      "goldmann",
+      "sach",
+      "oracle",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Palindrome Partitioning",
+    "link": "https://leetcode.com/problems/palindrome-partitioning/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=aZ0B1eWkSVU&amp;list=PLfqMhTWNBTe2C_dQAP1UoemcgAxBTlItp&amp;index=10",
+    "companies": [
+      "meta",
+      ",adobe,",
+      "Infosys,",
+      "Walmart",
+      "Labs,",
+      "Amazon",
+      "Microsoft"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Knights Tour",
+    "link": "https://leetcode.com/problems/check-knight-tour-configuration/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "google,amazon",
+      ",",
+      "microsoft,",
+      "oracle,",
+      "meta,TCS,",
+      "apple,",
+      "salesfoce,",
+      "citadel",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "M Coloring",
+    "link": "https://www.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "google",
+      ",",
+      "amazon,",
+      "microsoft,",
+      "meta",
+      ",",
+      "intuit,",
+      "citadel,",
+      "goldman",
+      "sachs,",
+      "oracle",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Rat in a Maze",
+    "link": "https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=D8Yze9CDDAw&amp;list=PLfqMhTWNBTe2C_dQAP1UoemcgAxBTlItp&amp;index=8",
+    "companies": [
+      "Amazon"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Subsets II",
+    "link": "https://leetcode.com/problems/subsets-ii/description/",
+    "difficulty": "Medium",
+    "video": "https://youtu.be/pNzljlzDCiI?list=PLfqMhTWNBTe2C_dQAP1UoemcgAxBTlItp&amp;t=1539",
+    "companies": [
+      "google,",
+      "amazon,",
+      "microsoft,",
+      "meta",
+      ",",
+      "adobe,",
+      "apple",
+      ",TCS",
+      ",",
+      "flipkart",
+      ",",
+      "uber,",
+      "swiggy",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Merge Sort",
+    "link": "https://leetcode.com/problems/sort-an-array/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google,",
+      "amazon",
+      ",",
+      "meta",
+      ",",
+      "microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "N Queens",
+    "link": "https://leetcode.com/problems/n-queens/",
+    "difficulty": "Hard",
+    "video": "https://www.youtube.com/watch?v=BdSJnIdR-4s&amp;list=PLfqMhTWNBTe2C_dQAP1UoemcgAxBTlItp&amp;index=6",
+    "companies": [
+      "Microsoft",
+      "Amazon",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q10",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Sudoku Solver",
+    "link": "https://leetcode.com/problems/sudoku-solver/description/",
+    "difficulty": "Hard",
+    "video": "https://www.youtube.com/watch?v=70cP3qtJp-s&amp;list=PLfqMhTWNBTe2C_dQAP1UoemcgAxBTlItp&amp;index=7",
+    "companies": [
+      "Amazon,",
+      "TCS",
+      ",",
+      "Apple,",
+      "Meta",
+      ",Infosys",
+      ",",
+      "Oracle,",
+      "Adobe,",
+      "Hive",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q11",
+    "category": "RECURSION & BACKTRACKING",
+    "title": "Count Inversions",
+    "link": "https://leetcode.com/problems/count-the-number-of-inversions/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Google,",
+      "amazon",
+      ",",
+      "salessforce",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "LINKED LIST",
+    "title": "Reverse a LL",
+    "link": "https://leetcode.com/problems/reverse-linked-list/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=R-CKBYnOv1U&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=59",
+    "companies": [
+      "google,",
+      "meta",
+      "",
+      ",",
+      "apple",
+      ",",
+      "microsoft,",
+      "amazon",
+      ",",
+      "oracle,",
+      "adobe,",
+      "TCS",
+      ",",
+      "qualcomm,Paypal,",
+      "JP",
+      "morgan",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "LINKED LIST",
+    "title": "Middle of LL",
+    "link": "https://leetcode.com/problems/middle-of-the-linked-list/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=nzaHG0dme4g&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=59",
+    "companies": [
+      "amazon,",
+      "meta",
+      ",google,",
+      "goldman",
+      "sachs,",
+      "qualcomm,intuit",
+      "",
+      ",",
+      "",
+      "walmart",
+      "labs",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "LINKED LIST",
+    "title": "Merge 2 Sorted LL",
+    "link": "https://leetcode.com/problems/merge-two-sorted-lists/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=f8RPIb-0DDE&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=61",
+    "companies": [
+      "",
+      "Accolite",
+      "Amazon",
+      "Belzabar",
+      "Brocade",
+      "FactSet",
+      "Flipkart",
+      "MakeMyTrip",
+      "Microsoft",
+      "OATS",
+      "Systems",
+      "Oracle",
+      "Samsung",
+      "Synopsys",
+      "Zoho"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "LINKED LIST",
+    "title": "Check if LL Is Palindrome or Not",
+    "link": "https://leetcode.com/problems/palindrome-linked-list/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "amazon,",
+      "meta",
+      ",google,",
+      "goldman",
+      "sachs,",
+      "cisco",
+      ",",
+      "samsung,",
+      "walmart",
+      "labs",
+      ",wipro",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "LINKED LIST",
+    "title": "Detect Cycle in LL",
+    "link": "https://leetcode.com/problems/linked-list-cycle/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=-1E8ZMS0gSs&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=60",
+    "companies": [
+      "google,",
+      "meta",
+      ",",
+      "microsoft,",
+      "amazon,",
+      "oracle,",
+      "paytm,",
+      "apple,",
+      "nvidia",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "LINKED LIST",
+    "title": "Remove Cycle in LL",
+    "link": "https://leetcode.com/problems/linked-list-cycle-ii/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=-1E8ZMS0gSs&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=60",
+    "companies": [
+      "amazon,",
+      "meta",
+      ",",
+      "apple,"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "LINKED LIST",
+    "title": "Flatten LL",
+    "link": "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=I8b0rff5F9M&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=66",
+    "companies": [
+      "google,",
+      "amazon,",
+      "meta",
+      ",microsoft",
+      ",",
+      "qualcomm,",
+      "oracle,",
+      "adobe",
+      ",",
+      "uber"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "LINKED LIST",
+    "title": "Clone LL with Random Pointers",
+    "link": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=8ze7Zopdsaw&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=62",
+    "companies": [
+      "meta",
+      ",",
+      "amazon,",
+      "microsoft",
+      ",",
+      "google,",
+      "intel",
+      ",",
+      "walmart",
+      "labs",
+      ",",
+      "nvidia",
+      ",",
+      "flipkart",
+      ",uber",
+      ",oracle",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "LINKED LIST",
+    "title": "Add 2 Numbers",
+    "link": "https://leetcode.com/problems/add-two-numbers/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "google,",
+      "amazon,",
+      "meta",
+      ",",
+      "microsoft,",
+      "oracle,",
+      "",
+      "Tejas",
+      "network,",
+      "",
+      "Josh",
+      "technology",
+      ",",
+      "TCS",
+      ",",
+      "Accenture",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q10",
+    "category": "LINKED LIST",
+    "title": "Reverse Linked List 2",
+    "link": "https://leetcode.com/problems/reverse-linked-list-ii/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      ",",
+      "amazon,",
+      "meta",
+      ",",
+      "microsoft,",
+      "adobe,",
+      "uber"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q11",
+    "category": "LINKED LIST",
+    "title": "LRU Cache",
+    "link": "https://leetcode.com/problems/lru-cache/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=GsY6y0iPaHw",
+    "companies": [
+      "Nvidia",
+      ",",
+      "Google,",
+      "Meta",
+      ",",
+      "Amazon,",
+      "Microsoft,",
+      "Oracle,",
+      "Adobe",
+      ",Infoys",
+      ",",
+      "Siemens",
+      ",Morgan",
+      "Stanley",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q12",
+    "category": "LINKED LIST",
+    "title": "Rotate a LL",
+    "link": "https://leetcode.com/problems/rotate-list/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Google,",
+      "Meta",
+      ",",
+      "Microsoft",
+      ",Salesforce",
+      ",Infosys",
+      ",",
+      "Uber",
+      ",",
+      "Apple",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q13",
+    "category": "LINKED LIST",
+    "title": "Reverse Nodes in K Groups",
+    "link": "https://leetcode.com/problems/reverse-nodes-in-k-group/description/",
+    "difficulty": "Hard",
+    "video": "https://www.youtube.com/watch?v=-swgIiMIlJo&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=66",
+    "companies": [
+      "google,",
+      "amazon,",
+      "meta",
+      ",",
+      "microsoft,",
+      "apple,",
+      "uber,",
+      "adobe,",
+      "TCS,DE",
+      "shaw,",
+      "zepto",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "STACK & QUEUE",
+    "title": "Implement Stack using Queue",
+    "link": "https://leetcode.com/problems/implement-stack-using-queues/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=sFvP5Ois0CE",
+    "companies": [
+      "google",
+      ",",
+      "meta",
+      ",",
+      "amazon,",
+      "microsoft,",
+      "adobe,",
+      "oracle,",
+      "optum",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "STACK & QUEUE",
+    "title": "Implement Queue using Stack",
+    "link": "https://leetcode.com/problems/implement-queue-using-stacks/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/sFvP5Ois0CE?t=544",
+    "companies": [
+      "amazon,",
+      "google,",
+      "microsoft,",
+      "adobe,",
+      "oracle",
+      ",",
+      "netflix",
+      ",",
+      "meta",
+      ",uber"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "STACK & QUEUE",
+    "title": "Next Greater Element I",
+    "link": "https://leetcode.com/problems/next-greater-element-i/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=NKbExYwvjb0",
+    "companies": [
+      "amazon,",
+      "meta",
+      ",",
+      "swiggy",
+      ",",
+      "microsoft",
+      ",",
+      "google,",
+      "apple,",
+      "morgan",
+      "stanley",
+      ",",
+      "oracle",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "STACK & QUEUE",
+    "title": "Valid Parenthesis",
+    "link": "https://leetcode.com/problems/valid-parentheses/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=NlHupEeDXzY&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=70",
+    "companies": [
+      "Google",
+      ",",
+      "meta",
+      ",",
+      "amazon,",
+      "linkedin",
+      ",",
+      "intuit",
+      ",",
+      "visa",
+      ",",
+      "IBM",
+      ",TCS",
+      "",
+      ",",
+      "JP",
+      "",
+      "morgan",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "STACK & QUEUE",
+    "title": "1st Non Repeating in Stream",
+    "link": "https://leetcode.com/problems/first-unique-character-in-a-string/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=sqyCBvEQN9c",
+    "companies": [
+      "amazon,",
+      "goldman",
+      "sach,",
+      "google,",
+      "apple,",
+      "meta",
+      ",",
+      "microsoft,",
+      "walmart",
+      "labs,",
+      "adobe,",
+      "TCS",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "STACK & QUEUE",
+    "title": "Reverse 1st K Elements of Queue",
+    "link": "https://www.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "Microsoft",
+      ",",
+      "amdocs,",
+      "amazon",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "STACK & QUEUE",
+    "title": "Time needed to Buy Tickets",
+    "link": "https://leetcode.com/problems/time-needed-to-buy-tickets/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "uber,",
+      "amazon,",
+      "microsoft,",
+      "google,",
+      ",meta"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "STACK & QUEUE",
+    "title": "Next Greater Element II",
+    "link": "https://leetcode.com/problems/next-greater-element-ii/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=If--3pm9K3U",
+    "companies": [
+      "amazon,",
+      "uber"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "STACK & QUEUE",
+    "title": "Previous Smaller Element",
+    "link": "https://leetcode.com/problems/maximum-subarray-min-product/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=WnjUfBn9nZM",
+    "companies": [
+      "amazon,",
+      "meta",
+      ",",
+      "microsoft,",
+      "apple,",
+      "visa",
+      ",",
+      "oracle,",
+      "intuit,",
+      "citadel,",
+      "samsung,",
+      "paypal",
+      ",",
+      "ebay",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q10",
+    "category": "STACK & QUEUE",
+    "title": "Celebrity Problem",
+    "link": "https://leetcode.com/problems/find-the-celebrity/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=OZPmEA_8FM8",
+    "companies": [
+      "linkedin,",
+      "meta,",
+      "microsoft,",
+      "amazon,",
+      "uber,",
+      "salesforce,",
+      "phonepe"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q11",
+    "category": "STACK & QUEUE",
+    "title": "Get Min Element from Stack",
+    "link": "https://leetcode.com/problems/min-stack/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=wHDm-N2m2XY",
+    "companies": [
+      "Google,",
+      "meta,",
+      "amazon,",
+      "saleforce,",
+      "intuit",
+      ",",
+      "paypal,",
+      "adobe,",
+      "salesforce,",
+      "Nike",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q12",
+    "category": "STACK & QUEUE",
+    "title": "Circular Tour / Gas Station",
+    "link": "https://leetcode.com/problems/gas-station/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=SmTow5Ht4iU",
+    "companies": [
+      "amazon,",
+      "microsoft,",
+      "goldman",
+      "sachs,",
+      "intuit",
+      ",IBM",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q13",
+    "category": "STACK & QUEUE",
+    "title": "Rotten Oranges",
+    "link": "https://leetcode.com/problems/rotting-oranges/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "amazon,",
+      "google,",
+      "microsoft,",
+      "meta,",
+      "oracle,",
+      "adobe,",
+      "cisco,",
+      "Infosys",
+      ",",
+      "Salesforce",
+      ",BNY",
+      "Mellon"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q14",
+    "category": "STACK & QUEUE",
+    "title": "Stock Span",
+    "link": "https://www.hackerearth.com/problem/algorithm/stock-span-4-a0d4600b-b5c6efe0/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=01vBuZyMfqk&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=70",
+    "companies": [
+      "Amazon",
+      ",",
+      "google,",
+      "Microsoft,",
+      "Oracle,",
+      "Samsung",
+      ",",
+      "Meta",
+      ",",
+      "Intuit",
+      ",",
+      "Phonepe,",
+      "zepto",
+      ",",
+      "Flipkart",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q15",
+    "category": "STACK & QUEUE",
+    "title": "Max Area in Histogram",
+    "link": "https://leetcode.com/problems/largest-rectangle-in-histogram/description/",
+    "difficulty": "Hard",
+    "video": "https://www.youtube.com/watch?v=ysy1o-QEj3k",
+    "companies": [
+      "Adobe,",
+      "apple,",
+      "Meta",
+      ",",
+      "Amazon,",
+      "google,",
+      "microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "BINARY TREES",
+    "title": "Inorder",
+    "link": "https://leetcode.com/problems/binary-tree-inorder-traversal/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/eKJrXBCRuNQ?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;t=2825",
+    "companies": [
+      "google",
+      ",",
+      "amazon",
+      ",",
+      "meta",
+      ",",
+      "microsoft",
+      ",adobe,",
+      "uber",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "BINARY TREES",
+    "title": "Preorder",
+    "link": "https://leetcode.com/problems/binary-tree-preorder-traversal/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/eKJrXBCRuNQ?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;t=2284",
+    "companies": [
+      "salesforce,",
+      "amazon,",
+      "microsoft,",
+      "meta",
+      ",",
+      "google",
+      ",adobe"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "BINARY TREES",
+    "title": "Postorder",
+    "link": "https://leetcode.com/problems/binary-tree-postorder-traversal/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/eKJrXBCRuNQ?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;t=3154",
+    "companies": [
+      "Amazon",
+      ",meta",
+      ",",
+      "google,",
+      "apple,",
+      "adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "BINARY TREES",
+    "title": "Symmetric Tree",
+    "link": "https://leetcode.com/problems/symmetric-tree/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "",
+      "Amazon",
+      ",",
+      "Google,",
+      "Oracle,",
+      "Apple,meta,Uber,Intuit",
+      ",Adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "BINARY TREES",
+    "title": "Minimum Distance between Nodes",
+    "link": "https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=dSBcCynP1nA&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=100",
+    "companies": [
+      "amazon,",
+      "google,",
+      "meta",
+      ",",
+      "linkedin",
+      ",",
+      "adobe,",
+      "microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "BINARY TREES",
+    "title": "Are 2 Trees Identical or Not",
+    "link": "https://leetcode.com/problems/same-tree/description/",
+    "difficulty": "Easy",
+    "video": "https://youtu.be/tumW7jsjv68?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt",
+    "companies": [
+      "meta",
+      ",",
+      "google",
+      ",",
+      "microsoft,"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "BINARY TREES",
+    "title": "Morris Inorder Traversal",
+    "link": "https://leetcode.com/problems/binary-tree-inorder-traversal/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=PUfADhkq1LI&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=96",
+    "companies": [
+      "Google,amazon,",
+      "meta",
+      ",apple,",
+      "adobe,",
+      "TCS,",
+      "flipkart",
+      ",",
+      "uber,",
+      "liinkedin",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "BINARY TREES",
+    "title": "Diameter",
+    "link": "https://leetcode.com/problems/diameter-of-binary-tree/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=aPyDPImR5UM&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=88",
+    "companies": [
+      "google,",
+      "amazon,",
+      "meta",
+      ",",
+      "microsoft",
+      ",",
+      "apple,",
+      "adobe,",
+      "uber"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "BINARY TREES",
+    "title": "Check if Tree is Height Balanced",
+    "link": "https://leetcode.com/problems/balanced-binary-tree/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "amazon",
+      ",",
+      "meta",
+      ",",
+      "amazon",
+      ",",
+      "google",
+      ",visa",
+      ",",
+      "oracle",
+      ",",
+      "TCS",
+      ",",
+      "Adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q10",
+    "category": "BINARY TREES",
+    "title": "Subtree of Another Tree",
+    "link": "https://leetcode.com/problems/subtree-of-another-tree/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=tumW7jsjv68&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=87",
+    "companies": [
+      "",
+      "Amazon",
+      "google",
+      "microsoft",
+      "adobe",
+      "uber",
+      "apple",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q11",
+    "category": "BINARY TREES",
+    "title": "Check if BT Mirror of itself or not",
+    "link": "https://leetcode.com/problems/symmetric-tree/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "google,",
+      "meta,",
+      "uber",
+      ",",
+      "morgan",
+      "stanley",
+      ",",
+      "ebay,microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q12",
+    "category": "BINARY TREES",
+    "title": "Top View of a Tree",
+    "link": "https://leetcode.com/problems/binary-tree-right-side-view/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=FGr-syrhvOA&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=89",
+    "companies": [
+      "amazon,",
+      "google,",
+      "meta,",
+      "linkedin",
+      ",",
+      "apple,",
+      "adobe,microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q13",
+    "category": "BINARY TREES",
+    "title": "Bottom View of a Tree",
+    "link": "https://leetcode.com/problems/find-bottom-left-tree-value/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "meta",
+      ",",
+      "amazon,",
+      "google",
+      ",",
+      "uber,",
+      "oracle,",
+      "flipkart",
+      ",",
+      "JP",
+      "morgan,",
+      "accolite"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q14",
+    "category": "BINARY TREES",
+    "title": "Level Order",
+    "link": "https://leetcode.com/problems/binary-tree-level-order-traversal/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "josh",
+      "technology",
+      ",",
+      "amazon,",
+      "google,",
+      "adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q15",
+    "category": "BINARY TREES",
+    "title": "Kth Level of Tree",
+    "link": "https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=ze4JO_ODl3w&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=90",
+    "companies": [
+      "meta",
+      ",",
+      "google,",
+      "amazon,",
+      "adobe,",
+      "microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q16",
+    "category": "BINARY TREES",
+    "title": "LCA",
+    "link": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=oX5D0uKOMck&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=91",
+    "companies": [
+      "meta",
+      ",",
+      "amazon",
+      ",",
+      "google,",
+      "linkedin",
+      ",",
+      "intuit",
+      ",",
+      "oracle,adobe,",
+      "flipkart",
+      ",",
+      "salesforce,",
+      "morgan",
+      "stanley",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q17",
+    "category": "BINARY TREES",
+    "title": "Transform to Sum Tree",
+    "link": "https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=TY6kEejJEM0&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=93",
+    "companies": [
+      "SAP",
+      ",",
+      "Amazon,",
+      "Ebay",
+      ",",
+      "Microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q18",
+    "category": "BINARY TREES",
+    "title": "Construct BT from Inorder & Pre order",
+    "link": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=33b1M980cCA&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=92",
+    "companies": [
+      "",
+      "Amazon,",
+      "",
+      "Microsoft,",
+      "meta",
+      ",",
+      "adobe,",
+      "uber",
+      ",",
+      "VMware",
+      ",",
+      "apple",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q19",
+    "category": "BINARY TREES",
+    "title": "Construct BT from Inorder & Post order",
+    "link": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google,",
+      "amazon,",
+      "microsoft",
+      ",",
+      "adobe,",
+      "bloomberg",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q20",
+    "category": "BINARY TREES",
+    "title": "Flatten BT to LL",
+    "link": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=dU2Z5HWSGM0&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=97",
+    "companies": [
+      "Google,",
+      "meta",
+      ",",
+      "amazon",
+      ",microsoft,",
+      "Myntra",
+      ",",
+      "adobe,",
+      "oracle,",
+      "apple"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q21",
+    "category": "BINARY TREES",
+    "title": "Max Width of BT",
+    "link": "https://leetcode.com/problems/maximum-width-of-binary-tree/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=rhz-csskg_A&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=95",
+    "companies": [
+      "Amazon",
+      ",",
+      "Meta",
+      ",",
+      "Uber,",
+      "Microsoft,",
+      "Uber",
+      ",",
+      "Adobe,Apple",
+      ",",
+      "google",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q22",
+    "category": "BINARY TREES",
+    "title": "Zig Zag Traversal of BT",
+    "link": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon",
+      ",",
+      "meta,",
+      "microsoft,",
+      "google,oracle,",
+      "Adobe,",
+      "Walmart",
+      "Labs",
+      ",",
+      "Ebay",
+      ",",
+      "Flipkart"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q23",
+    "category": "BINARY TREES",
+    "title": "Max Path Sum",
+    "link": "https://leetcode.com/problems/binary-tree-maximum-path-sum/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Google,",
+      "Meta",
+      ",",
+      "Amazon",
+      ",",
+      "Oracle,",
+      "Salesforce,",
+      "Goldman",
+      "sachs",
+      ",",
+      "Uber,",
+      "Flipkart",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q24",
+    "category": "BINARY TREES",
+    "title": "Kth Ancestor",
+    "link": "https://leetcode.com/problems/kth-ancestor-of-a-tree-node/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Google",
+      ",",
+      "Amazon",
+      ",Microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "BST",
+    "title": "Kth largest in BST",
+    "link": "https://leetcode.com/problems/kth-largest-element-in-a-stream/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "Meta",
+      ",",
+      "Amazon,",
+      "Google",
+      ",",
+      "Adobe,",
+      "Atlassian",
+      ",",
+      "Salesforce",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "BST",
+    "title": "Sorted Array to Balanced BST",
+    "link": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/",
+    "difficulty": "Easy",
+    "video": "https://www.youtube.com/watch?v=0s6sCjs_4g0&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=99",
+    "companies": [
+      "Amazon",
+      ",",
+      "Google,",
+      "Meta,",
+      "Apple,",
+      "Adobe",
+      ",",
+      "Airbnb",
+      ",",
+      "Samsung",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "BST",
+    "title": "Validate BST",
+    "link": "https://leetcode.com/problems/validate-binary-search-tree/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=dSBcCynP1nA&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=100",
+    "companies": [
+      "Amazon,",
+      "Google,",
+      "Meta,",
+      "Salesforce,",
+      "IBM",
+      ",",
+      "Adobe,",
+      "Citadel",
+      ",",
+      "Oracle",
+      ",",
+      "Uber"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "BST",
+    "title": "Kth Smallest in BST",
+    "link": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=Kq4BbvIhj44&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=102",
+    "companies": [
+      "",
+      "Accolite",
+      "Amazon",
+      "Google",
+      "Uber",
+      "Microsoft",
+      "Meta",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "BST",
+    "title": "LCA in BST",
+    "link": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=ORxkZ12FrU4&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=103",
+    "companies": [
+      "Meta,",
+      "Amazon,",
+      "Linkedin",
+      ",",
+      "Bloomberg,",
+      "Oracle,",
+      "Samsung",
+      ",",
+      "Apple"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "BST",
+    "title": "Populate Next Right Pointers",
+    "link": "https://leetcode.com/problems/populating-next-right-pointers-in-each-node/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=a8VKpW1DsD8&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=108",
+    "companies": [
+      "Meta",
+      ",",
+      "Amazon,",
+      "Walmart",
+      "Labs,",
+      "Flipkart,",
+      "Saleforce,Adobe,Oracle",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "BST",
+    "title": "Recover BST",
+    "link": "https://leetcode.com/problems/recover-binary-search-tree/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=0KGzfij_SCk&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=106",
+    "companies": [
+      "Microsoft,",
+      "amazon,",
+      "google,",
+      "oracle,",
+      "adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "BST",
+    "title": "Construct from Preorder",
+    "link": "https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=-n5Ur1wE5Jc&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=104",
+    "companies": [
+      "",
+      "Adobe,",
+      "Meta",
+      ",",
+      "Google,",
+      "Microsoft"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "BST",
+    "title": "BST Iterator",
+    "link": "https://leetcode.com/problems/binary-search-tree-iterator/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=dS1bKglre3A&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=109",
+    "companies": [
+      "Meta",
+      ",",
+      "Amazon,",
+      "Microsoft,",
+      "Linkedin",
+      ",",
+      "Adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q10",
+    "category": "BST",
+    "title": "Flatten BST to Sorted list",
+    "link": "https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Meta",
+      ",",
+      "microsoft,",
+      "Amazon,",
+      "Nvidia"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q11",
+    "category": "BST",
+    "title": "Inorder Successor",
+    "link": "https://leetcode.com/problems/inorder-successor-in-bst/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=IHNkql1tAnk&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=110",
+    "companies": [
+      "Amazon",
+      ",",
+      "Google,",
+      "meta",
+      ",",
+      "Citadel,",
+      "Nvidia,Linkedin",
+      ",uber,",
+      "Intuit",
+      ",",
+      "Qualcomm"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q12",
+    "category": "BST",
+    "title": "Inorder Predecessor",
+    "link": "https://leetcode.com/problems/delete-node-in-a-bst/description/",
+    "difficulty": "Medium",
+    "video": "https://www.youtube.com/watch?v=IHNkql1tAnk&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=110",
+    "companies": [
+      "Microsoft",
+      ",",
+      "Bloomberg",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q13",
+    "category": "BST",
+    "title": "Largest BST in BT",
+    "link": "https://leetcode.com/problems/largest-bst-subtree/description/",
+    "difficulty": "Hard",
+    "video": "https://www.youtube.com/watch?v=Pr-HFxp7npk&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=107",
+    "companies": [
+      "Microsoft",
+      ",",
+      "Meta",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q14",
+    "category": "BST",
+    "title": "Serialize & Deserialize BST",
+    "link": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Google,",
+      "Meta",
+      ",",
+      "Oracle,",
+      "Flipkart",
+      ",",
+      "Adobe,",
+      "Microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q15",
+    "category": "BST",
+    "title": "Merge 2 BSTS",
+    "link": "https://leetcode.com/problems/merge-bsts-to-create-single-bst/description/",
+    "difficulty": "Hard",
+    "video": "https://www.youtube.com/watch?v=AiKZjCuy2k4&amp;list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt&amp;index=105",
+    "companies": [
+      "Meta,",
+      "Microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "HEAPS",
+    "title": "Merge K Sorted Arrays",
+    "link": "https://leetcode.com/problems/merge-sorted-array/description/?envType=problem-list-v2&amp;envId=sorting",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "google,",
+      "meta",
+      ",",
+      "amazon,",
+      "microsoft,",
+      "HCL",
+      ",",
+      "Cisco,",
+      "IBM",
+      ",Oracle,",
+      "Adobe"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "HEAPS",
+    "title": "K most Frequent Elements",
+    "link": "https://leetcode.com/problems/top-k-frequent-elements/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Meta",
+      ",",
+      "Amazon,",
+      "Google",
+      ",",
+      "Microsoft",
+      ",",
+      "Oracle,",
+      "Goldman",
+      "sachs",
+      ",",
+      "Uber,",
+      "Salesforce",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "HEAPS",
+    "title": "Heap Sort",
+    "link": "https://leetcode.com/problems/sort-an-array/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Adobe",
+      ",",
+      "TCS",
+      ",",
+      "Amazon,",
+      "Google,",
+      "Meta",
+      ",",
+      "hive,",
+      "Infosys",
+      ",",
+      "Oracle,",
+      "",
+      "Apple",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "HEAPS",
+    "title": "Kth Smallest Element",
+    "link": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/?envType=problem-list-v2&amp;envId=sorting",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "Amazon,",
+      "Meta",
+      ",",
+      "apple,",
+      "phonepe",
+      ",",
+      "salesforce"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "HEAPS",
+    "title": "Median from Stream",
+    "link": "https://leetcode.com/problems/find-median-from-data-stream/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "",
+      "Google,",
+      "Amazon,",
+      "Meta,",
+      "Apple,",
+      "Microsoft,",
+      "Pinterest",
+      ",",
+      "Paypal,",
+      "Oracle,Goldman",
+      "Sachs",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "HEAPS",
+    "title": "Smallest Range in K Sorted List",
+    "link": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Phonepe",
+      ",",
+      "Meta",
+      ",",
+      "Microsoft",
+      ",",
+      "Flipkart",
+      ",",
+      "DE",
+      "shaw,",
+      "Adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "TRIE",
+    "title": "Longest Common Prefix",
+    "link": "https://leetcode.com/problems/longest-common-prefix/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "amazon,",
+      "TCS,",
+      "Visa,",
+      "Accenture,",
+      "Infosys",
+      ",",
+      "Deloitte",
+      ",",
+      "Google",
+      ",",
+      "Oracle"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "TRIE",
+    "title": "Word Break Problem",
+    "link": "https://leetcode.com/problems/word-break/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "Amazon,",
+      "",
+      "Google",
+      ",",
+      "Netflix",
+      ",",
+      "Intuit",
+      ",",
+      "Walmart",
+      "Labs",
+      ",",
+      "Salesforce",
+      ",",
+      "Flipkart",
+      ",",
+      "Uber,",
+      "oracle",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "TRIE",
+    "title": "Implement a Phone Directory",
+    "link": "https://leetcode.com/problems/design-phone-directory/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "TRIE",
+    "title": "Implement a Trie",
+    "link": "https://leetcode.com/problems/implement-trie-prefix-tree/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google,",
+      "Amazon,",
+      "Apple,",
+      "Meta,",
+      "Uber,",
+      "Nvidia",
+      ",",
+      "Samsung",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "TRIE",
+    "title": "Longest String with All Prefix",
+    "link": "https://leetcode.com/problems/longest-word-with-all-prefixes/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "GRAPH",
+    "title": "Flood Fill Algorithm",
+    "link": "https://leetcode.com/problems/flood-fill/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "Samsung",
+      ",",
+      "Flipkart",
+      ",SAP",
+      "Labs",
+      ",",
+      "Ola",
+      ",",
+      "amazon,",
+      "microsoft,",
+      "adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "GRAPH",
+    "title": "BFS",
+    "link": "https://leetcode.com/problems/extra-characters-in-a-string/description/?envType=daily-question&amp;envId=2024-09-23",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Samsung",
+      ",",
+      "Intuit,",
+      "Accolite",
+      ",",
+      "Amazon",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "GRAPH",
+    "title": "DFS",
+    "link": "https://leetcode.com/problems/clone-graph/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Meta",
+      ",",
+      "Google,",
+      "Visa,",
+      "Adobe,",
+      "Microsoft,",
+      "Apple,",
+      "Oracle,",
+      "Flipkart",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "GRAPH",
+    "title": "Detect cycle in undirected using BFS",
+    "link": "https://leetcode.com/problems/redundant-connection/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Meta",
+      ",",
+      "Google,",
+      "Visa,",
+      "Adobe,",
+      "Microsoft,",
+      "Apple,",
+      "Oracle,",
+      "Flipkart",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "GRAPH",
+    "title": "Detect cycle in undirected using DFS",
+    "link": "https://leetcode.com/problems/redundant-connection/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      ",",
+      "Meta",
+      ",",
+      "microsoft,",
+      "Inmobi",
+      ",",
+      "Amazon",
+      "",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "GRAPH",
+    "title": "Detect cycle in directed using BFS",
+    "link": "https://leetcode.com/problems/detect-cycles-in-2d-grid/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      ",",
+      "Meta",
+      ",",
+      "microsoft,",
+      "Inmobi",
+      ",",
+      "Amazon",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "GRAPH",
+    "title": "Detect cycle in directed using DFS",
+    "link": "https://leetcode.com/problems/distance-to-a-cycle-in-undirected-graph/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google,",
+      "Amazon,",
+      "Meta",
+      ",Microsoft,",
+      "Apple,",
+      "uber,",
+      "Adobe,Yahoo"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "GRAPH",
+    "title": "Topological Sorting (DFS)",
+    "link": "https://leetcode.com/problems/minimum-height-trees/description/?envType=problem-list-v2&amp;envId=topological-sort",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Flipkart,",
+      "Morgan",
+      "Stanley,",
+      "Accolite,",
+      "Amazon",
+      ",",
+      "Microsoft,",
+      "OYO",
+      ",",
+      "Samsung",
+      "",
+      ",",
+      "DE",
+      "Shaw",
+      ",",
+      "Visa",
+      ",",
+      "Moonfrog",
+      "Labs",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "GRAPH",
+    "title": "Prim's Algorithm (MST)",
+    "link": "https://leetcode.com/problems/min-cost-to-connect-all-points/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Flipkart,",
+      "Morgan",
+      "Stanley,",
+      "Accolite,",
+      "Amazon",
+      ",",
+      "Microsoft,",
+      "OYO",
+      ",",
+      "Samsung",
+      "",
+      ",",
+      "DE",
+      "Shaw",
+      ",",
+      "Visa"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q10",
+    "category": "GRAPH",
+    "title": "Bellman Ford Algorithm",
+    "link": "https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Google,",
+      "Meta,",
+      "Salesforce,",
+      "Intuit",
+      ",",
+      "Linkedin",
+      ",",
+      "Nvidia",
+      ",",
+      "Uber,",
+      "Microsoft"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q11",
+    "category": "GRAPH",
+    "title": "Floyd Warshall Algo",
+    "link": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "flipkart,",
+      "microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q12",
+    "category": "GRAPH",
+    "title": "Kosaraju Strongly Connected Components",
+    "link": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Meta",
+      ",",
+      "Stripe,",
+      "Airbnb",
+      ",",
+      "Oracle,",
+      "DE",
+      "Shaw,",
+      "Apple",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q13",
+    "category": "GRAPH",
+    "title": "Check Bi-partite Graph",
+    "link": "https://leetcode.com/problems/is-graph-bipartite/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "",
+      "Amazon",
+      ",",
+      "Adobe,",
+      "",
+      "Directi,Uber,DE",
+      "shaw,",
+      "Microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q14",
+    "category": "GRAPH",
+    "title": "Number of Islands",
+    "link": "https://leetcode.com/problems/number-of-islands/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "Amazon",
+      ",",
+      "Adobe,",
+      "",
+      "Directi,Uber,DE",
+      "shaw,",
+      "Microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q15",
+    "category": "GRAPH",
+    "title": "Rotten Oranges",
+    "link": "https://leetcode.com/problems/rotting-oranges/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Sharechat",
+      "",
+      "+",
+      "Directi",
+      ",",
+      "Amazon",
+      ",",
+      "microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q16",
+    "category": "GRAPH",
+    "title": "01 Matrix",
+    "link": "https://leetcode.com/problems/01-matrix/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      ",",
+      "uber,",
+      "Meta,",
+      "microsoft,",
+      "Amazon",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q17",
+    "category": "GRAPH",
+    "title": "Course Schedule I & II",
+    "link": "https://leetcode.com/problems/course-schedule-ii/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Google,",
+      "Zoho,",
+      "Oracle,",
+      "Samsung,",
+      "Meta",
+      ",",
+      "intuit",
+      "",
+      ",",
+      "zepto,",
+      "phonepe",
+      ",",
+      "fliipkart,",
+      "citadel",
+      ",",
+      "salesforce"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q18",
+    "category": "GRAPH",
+    "title": "Alien Dictionary",
+    "link": "https://leetcode.com/problems/alien-dictionary/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Google,",
+      "amazon,",
+      "Linkedin",
+      ",Doordash,",
+      "Flipkart,",
+      "Adobe",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q19",
+    "category": "GRAPH",
+    "title": "Cheapest Flights within K Stops",
+    "link": "https://leetcode.com/problems/cheapest-flights-within-k-stops/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      ",",
+      "amazon",
+      ",",
+      "meta",
+      ",",
+      "adobe,",
+      "uber",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q20",
+    "category": "GRAPH",
+    "title": "Clone a Graph",
+    "link": "https://leetcode.com/problems/clone-graph/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon",
+      ",",
+      "Microoft",
+      ",",
+      "Meta",
+      ",",
+      "Linkedin",
+      ",",
+      "Oracle",
+      ",",
+      "Apple",
+      ",",
+      "Adobe,Nvidia,",
+      "Paypal",
+      ",",
+      "Goldman",
+      "Sachs,",
+      "Salesforce"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q21",
+    "category": "GRAPH",
+    "title": "Most Stones Removed",
+    "link": "https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Microsoft",
+      "Flipkart",
+      "Pinterest",
+      "Meta",
+      "Uber",
+      "Samung",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q22",
+    "category": "GRAPH",
+    "title": "Number of Provinces",
+    "link": "https://leetcode.com/problems/number-of-provinces/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Paytm"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q23",
+    "category": "GRAPH",
+    "title": "Number of Ways to Arrive at Destination",
+    "link": "https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Phonepe",
+      ",",
+      "",
+      "Google,",
+      "Apple,",
+      "Microsoft,",
+      "Amazon",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q24",
+    "category": "GRAPH",
+    "title": "Topoplogical Sorting (BFS)",
+    "link": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/?envType=problem-list-v2&amp;envId=topological-sort",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Sprinklr,",
+      "Google,",
+      "Amazon,",
+      "Meta",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q25",
+    "category": "GRAPH",
+    "title": "Dijkstra's Algorithm",
+    "link": "https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Google,",
+      "Amazon",
+      ",",
+      "Meta",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q26",
+    "category": "GRAPH",
+    "title": "Kruskal's Algorithm (MST)",
+    "link": "https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Airbnb",
+      ",",
+      "Citadel,",
+      "Uber,",
+      "Google,",
+      "Meta",
+      ",",
+      "Airbnb"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "DP",
+    "title": "Buy & Sell Stocks I",
+    "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "Amazon",
+      "D-E-Shaw",
+      "Directi",
+      "Flipkart",
+      "Goldman",
+      "Sachs",
+      "Intuit",
+      "MakeMyTrip",
+      "Microsoft",
+      "Ola",
+      "Cabs",
+      "Oracle",
+      "Paytm",
+      "Pubmatic",
+      "Quikr",
+      "Salesforce",
+      "Sapient",
+      "Swiggy",
+      "Walmart",
+      "Media.net",
+      "Google"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "DP",
+    "title": "0-1 Knapsack",
+    "link": "https://leetcode.com/problems/partition-equal-subset-sum/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "Amazon",
+      "Directi",
+      "Flipkart",
+      "GreyOrange",
+      "Microsoft",
+      "Mobicip",
+      "Morgan",
+      "Stanley",
+      "Oracle",
+      "Payu",
+      "Snapdeal",
+      "Visa"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "DP",
+    "title": "Target Sum Subset",
+    "link": "https://leetcode.com/problems/target-sum/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Myntra",
+      ",Microsoft,",
+      "Meta",
+      ",",
+      "Amazon",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "DP",
+    "title": "Unbounded Knapsack",
+    "link": "https://leetcode.com/problems/minimum-cost-for-tickets/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon",
+      ",",
+      "Google",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "DP",
+    "title": "Coin Change",
+    "link": "https://leetcode.com/problems/coin-change/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Adobe,",
+      "Salesforce,",
+      "",
+      "Amazon,",
+      "Google,",
+      "Microsoft,",
+      "Intuit",
+      ",",
+      "Infosys,",
+      "",
+      "Accenture",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "DP",
+    "title": "Longest Common Subsequence",
+    "link": "https://leetcode.com/problems/longest-common-subsequence/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Microsoft",
+      ",",
+      "Meta",
+      ",",
+      "TCS,",
+      "Oracle",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q7",
+    "category": "DP",
+    "title": "Longest Common Substring",
+    "link": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Morgan",
+      "Stanley",
+      ",",
+      "Amazon",
+      ",",
+      "Microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q8",
+    "category": "DP",
+    "title": "Edit Distance",
+    "link": "https://leetcode.com/problems/edit-distance/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Goldman",
+      "Sachs,",
+      "Paypal",
+      ",",
+      "Salesforce",
+      ",",
+      "Atlassian,",
+      "Intuit",
+      ",",
+      "IBM",
+      ",",
+      "Google,",
+      "Amazon"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q9",
+    "category": "DP",
+    "title": "Longest Increasing Subsequence",
+    "link": "https://leetcode.com/problems/longest-increasing-subsequence/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "Amazon,",
+      "",
+      "Google,Linkedin",
+      ",",
+      "Cisco",
+      ",",
+      "TCS",
+      ",",
+      "Meta",
+      ",",
+      "",
+      "Cisco",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q10",
+    "category": "DP",
+    "title": "Palindromic Partitioning (MCM)",
+    "link": "https://leetcode.com/problems/palindrome-partitioning/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      "+",
+      "Goldman",
+      "Sachs",
+      "+",
+      "Citrix",
+      ",",
+      "TCS,",
+      "Meta,",
+      "Adobe,",
+      "Accenture",
+      ",",
+      "Rubrik",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q11",
+    "category": "DP",
+    "title": "Max Product Subarray",
+    "link": "https://leetcode.com/problems/maximum-product-subarray/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "Goldman",
+      "Sachs",
+      ",",
+      "Apple,Adobe,",
+      "TCS,",
+      "Uber"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q12",
+    "category": "DP",
+    "title": "Unique BSTs",
+    "link": "https://leetcode.com/problems/unique-binary-search-trees/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon",
+      "+",
+      "Google"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q13",
+    "category": "DP",
+    "title": "Longest Palindromic Subsequence",
+    "link": "https://leetcode.com/problems/longest-palindromic-subsequence/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Google",
+      ",",
+      "Microsoft",
+      "",
+      ",",
+      "Tower",
+      "Research",
+      "Capital,",
+      "Oracle,",
+      "Amazon",
+      "",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q14",
+    "category": "DP",
+    "title": "Buy & Sell Stocks II",
+    "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Walmart",
+      "+",
+      "Flipkart"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q15",
+    "category": "DP",
+    "title": "Nth Catalan",
+    "link": "https://leetcode.com/problems/unique-binary-search-trees/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Amazon",
+      ",",
+      "Google,",
+      "Meta",
+      ",",
+      "Microsoft",
+      ",",
+      "Infosys"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q16",
+    "category": "DP",
+    "title": "Minimum Partitioning",
+    "link": "https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Oracle,",
+      "Phonepe,",
+      "Adobe",
+      ",",
+      "Apple",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q17",
+    "category": "DP",
+    "title": "Wildcard Pattern Matching",
+    "link": "https://leetcode.com/problems/wildcard-matching/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Linkedin",
+      ",",
+      "DE",
+      "Shaw",
+      ",",
+      "Adobe,",
+      "Uber,",
+      "Meta,Amazon"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q18",
+    "category": "DP",
+    "title": "Rod Cutting",
+    "link": "https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Uber,",
+      "samsung,",
+      "Arcesium",
+      ",",
+      "Google,",
+      "amazon,",
+      "meta",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q19",
+    "category": "DP",
+    "title": "Egg Dropping",
+    "link": "https://leetcode.com/problems/super-egg-drop/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Microsoft",
+      "+",
+      "Amazon",
+      "+",
+      "Ola",
+      ",",
+      "Salesforce,",
+      "Apple"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q20",
+    "category": "DP",
+    "title": "Longest Bitonic Subsequence",
+    "link": "https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "",
+      "Amazon",
+      "D-E-Shaw",
+      "Goldman",
+      "Sachs",
+      "Google",
+      "Hike",
+      "MakeMyTrip",
+      "MAQ",
+      "Software",
+      "Myntra",
+      "Nearbuy",
+      "Opera",
+      "Oracle",
+      "Philips",
+      "Samsung",
+      "Service",
+      "Now",
+      "Unisys",
+      "VMWare",
+      "Microsoft"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q21",
+    "category": "DP",
+    "title": "MCM",
+    "link": "https://leetcode.com/problems/burst-balloons/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "Amazon,",
+      "microsoft,",
+      "google,",
+      "meta",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q1",
+    "category": "GREEDY",
+    "title": "Assign Cookies",
+    "link": "https://leetcode.com/problems/assign-cookies/description/",
+    "difficulty": "Easy",
+    "video": null,
+    "companies": [
+      "Amazon",
+      ",",
+      "Accenture",
+      ",",
+      "Uber",
+      ",",
+      "Adobe,",
+      "Meta",
+      ",",
+      "Google",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q2",
+    "category": "GREEDY",
+    "title": "Indian Coins",
+    "link": "https://leetcode.com/problems/coin-change/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "Accolite",
+      "Amazon",
+      "Morgan",
+      "Stanley",
+      "Oracle",
+      "Paytm",
+      "Samsung",
+      "Snapdeal",
+      "Synopsys",
+      "Visa",
+      "Microsoft",
+      "Google"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q3",
+    "category": "GREEDY",
+    "title": "Fractional Knapsack",
+    "link": "https://leetcode.com/problems/simplified-fractions/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "Microsoft"
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q4",
+    "category": "GREEDY",
+    "title": "maximum length of pair chain",
+    "link": "https://leetcode.com/problems/maximum-length-of-pair-chain/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "",
+      "Amazon",
+      ",",
+      "bloomberg,",
+      "swiggy",
+      ",",
+      "adobe",
+      ",",
+      "apple",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q5",
+    "category": "GREEDY",
+    "title": "Activity Selection",
+    "link": "https://leetcode.com/problems/activity-participants/description/",
+    "difficulty": "Medium",
+    "video": null,
+    "companies": [
+      "Meta,",
+      "amazon",
+      ",",
+      "google",
+      ",",
+      "microsoft",
+      ""
+    ],
+    "prerequisites": null
+  },
+  {
+    "id": "q6",
+    "category": "GREEDY",
+    "title": "Job Scheduling",
+    "link": "https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/",
+    "difficulty": "Hard",
+    "video": null,
+    "companies": [
+      "amazon",
+      ",",
+      "microsoft",
+      ",",
+      "airbnb,",
+      "adobe,phonepe"
+    ],
+    "prerequisites": null
+  }
+]
